@@ -1,0 +1,14 @@
+image: node:7.5.0
+
+pipelines:
+  default:
+    - step:
+        script: # Modify the commands below to build your repository.
+          - npm install
+          - npm test
+          - apt-get update && apt-get install -y python-dev
+          - curl -O https://bootstrap.pypa.io/get-pip.py
+          - python get-pip.py
+          - pip install awsebcli --upgrade
+          - eb init "TU DELFT" -r eu-central-1 -p node.js
+          - eb deploy TuDelft-env

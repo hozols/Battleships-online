@@ -1,0 +1,33 @@
+.game {
+
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.game .board {
+
+  width: 450px;
+  height: 450px;
+  background: url('/images/water2.jpg') no-repeat;
+  background-size: 100% 100%;
+  transform: rotateX(60deg);
+  margin: 40px;
+  float: left;
+
+}
+
+.cell {
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  float: left;
+  cursor: pointer;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+.cell:hover {
+
+  background-color: rgba(255, 0, 0, 0.4);
+}
